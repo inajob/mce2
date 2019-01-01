@@ -210,6 +210,7 @@ class TwitterOAuth {
     curl_setopt($ci, CURLOPT_HTTPHEADER, array('Expect:', $header));
     curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, $this->ssl_verifypeer);
     curl_setopt($ci, CURLOPT_HEADERFUNCTION, array($this, 'getHeader'));
+    curl_setopt($ci, CURLOPT_SAFE_UPLOAD, FALSE);
     curl_setopt($ci, CURLOPT_HEADER, FALSE);
 
     switch ($method) {
