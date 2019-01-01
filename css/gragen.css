@@ -1,0 +1,195 @@
+/* CSS */
+/*** Start Vanilla CSS 1.0.2 */ body{font:9pt/1.5em sans-serif;}pre,code,tt{font:1em/1.5em 'Andale Mono','Lucida Console',monospace;}h1,hc2,h3,h4,h5,h6,b,strong{font-weight:bold;}em,i,dfn{font-style:italic;}dfn{font-weight:bold;}p,code,pre,kbd{margin:0 0 1.5em 0;}blockquote{margin:0 1.5em 1.5em 1.5em;}cite{font-style:italic;}li ul,li ol{margin:0 1.5em;}ul,ol{margin:0 1.5em 1.5em 1.5em;}ul{list-style-type:disc;}ol{list-style-type:decimal;}ol ol{list-style:upper-alpha;}ol ol ol{list-style:lower-roman;}ol ol ol ol{list-style:lower-alpha;}dl{margin:0 0 1.5em 0;}dl dt{font-weight:bold;}dd{margin-left:1.5em;}table{margin-bottom:1.4em;width:100%;}th{font-weight:bold;}th,td,caption{padding:4px 10px 4px 5px;}tfoot{font-style:italic;}sup,sub{line-height:0;}abbr,acronym{border-bottom:1px dotted;}address{margin:0 0 1.5em;font-style:italic;}del{text-decoration:line-through;}pre{margin:1.5em 0;white-space:pre;}img.centered,.aligncenter,div.aligncenter{display:block;margin-left:auto;margin-right:auto;}img.alignright{display:inline;}img.alignleft{display:inline;}.alignright{float:right;margin-left:10px;}.alignleft{float:left;margin-right:10px;}img { max-width: 100%; }* html .clearfix{height:1%;}*+html .clearfix{display:inline-block;}.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}* html .group{height:1%;}*+html .group{display:inline-block;}.group:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+html,body{
+    padding:0px;
+    margin:0px;
+}
+body{
+  background-color:#ddd;
+  background-image: url("../data/tw:ina_ani:background.png");
+}
+a:hover{
+  background-color:white;
+  color:#336;
+  /*border:solid 1px;*/
+}
+
+#edit button{
+  padding:1em;
+}
+
+/* 汎用 */
+
+.lfloat{
+    float:left;
+}
+.w100p{
+    width:100%;
+}
+.hide{display:none;}
+
+.button{
+  color:white;
+  padding:1em;
+}
+
+.group{
+  display:inline;
+  padding-left:2em;
+  padding-right:2em;
+}
+
+.panel{
+  background-color:#eef;
+  margin:0.3em;
+  padding:0.3em;
+}
+.panel input{
+  width:90%;
+  font-size:3em;
+}
+
+.piece{
+  background-color:#eef;
+  margin:0.3em;
+  padding:0.3em;
+  border: solid 1px #339;
+  width:120px;
+  height:180px;
+  overflow:none;
+}
+
+
+.bpanel{
+  background-color:#eff;
+  margin:2em;
+  padding:0.3em;
+  border: solid #339;
+  border-width: 12px 1px 1px 1px;
+
+  background-image: url("../data/tw:ina_ani:intro.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+ 
+
+}
+
+.scroll{
+  overflow:auto;
+}
+
+.upspace{
+  margin-top:10em;
+}
+
+/* 特化 */
+
+#header{
+    background-color:#bbf;
+
+    background-image: url("../data/tw:ina_ani:header.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    text-align:left;
+}
+#header div{
+  padding-left:1em;
+  padding-right:1em;
+}
+#favs{
+  text-align:right;
+}
+#title-div{
+  text-align:center;
+  font-size:2em;
+  padding-bottom:0.2em;
+}
+#toolbar{
+    height:29px;
+    padding:2px;
+    background-color:#339;
+}
+#toolbar button{
+  height:25px;
+  background-color:#ddd;
+  border:solid #99f;
+}
+#description{
+  font-size:1.2em;
+}
+#footer{
+    background-color:#339;
+    color:white;
+    text-align:right;
+    padding-top:1em;
+    padding-bottom:5em;
+
+    background-image: url("../data/tw:ina_ani:footer.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+ 
+}
+#footer div{
+  padding-left:1em;
+  padding-right:1em;
+}
+#footer a{
+  color: #aaf;
+}
+
+#tab{
+
+}
+
+#tab button{
+    border:solid;
+}
+#ads{
+  margin:0.1em;
+  padding:0.1em;
+  border:dotted 3px;
+}
+#ads div{
+  display:inline;
+  margin:3px;
+}
+#contents{
+    margin:5px;
+}
+#stage{
+    width:410px;
+    height:410px;
+    background-color:gray;
+}
+#canv{
+    width:400px;
+    height:400px;
+    /*margin:5px;*/
+    background-color:white;
+}
+#edit{
+    width:410px;
+    height:410px;
+}
+#holders{
+    width:410px;
+    height:410px;
+}
+#text-div{
+    margin:0px;
+    /*border-width:3px;*/
+    width:100%;
+    height:100%;
+}
+#text{
+  width:95%;
+  height:80%;
+  background-color:#ffd;
+}
+#debug{
+    border:dotted 1px;
+    height:20%;
+    margin:0px;
+    /*display:none;*/
+}
+
