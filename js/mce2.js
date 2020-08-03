@@ -505,7 +505,7 @@ function dumpDataURL(){
 	  if(l.length > 1)q = l[1];
 	  //console.log(q)
 	  $.ajax({
-	    url: 'http://inajob.no-ip.org:10080/ad/amz.php?q=' + encodeURIComponent(q) + '&callback=?',
+	    url: 'http://web.inajob.tk/ad/amz.php?q=' + encodeURIComponent(q) + '&callback=?',
 	    dataType:'jsonp',
 	    success:function(o){
 	      var i,elm;
