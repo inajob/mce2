@@ -23,50 +23,56 @@
       <div id="tab">
         <button id="variables-btn">概要</button>
         <button id="source-btn">ソースコード</button>
-        <button id="render-btn">書き出し</button>
+        <button id="render-btn">PNG書き出し</button>
+        <button id="render-svg-btn">SVG書き出し</button>
       </div>
       <div id="text-div">
         <textarea id="text"></textarea>
-	<pre id="debug"></pre>
+        <pre id="debug"></pre>
       </div>
       <div id="labels-div">
         <div id="description"></div>
         <div id="labels"></div>
         <div id="serialize"></div>
         <button id="twit-btn">この魔法陣をつぶやく</button>
-	<div class="panel upspace">
-	  <h2>ads</h2>
+        <div class="panel upspace">
+          <h2>ads</h2>
           <div id="ads"></div>
-	</div>
+        </div>
       </div>
       <div id="render-div">
         <input id="render-width" type="text" value="1024" />x<input id="render-height" type="text" value="768">
-	<select id="render-select">
-	  <option value="1024,768">1024x768</option>
-	  <option value="744,1392">iPhone5 (744x1392)</option>
-	  <option value="740,1196">iPhone4 (740×1196)</option>
-	  <option value="1424,1424">iPad2/mini (1424×1424)</option>
-	  <option value="2448,2448">iPad Retina (2448×2448)</option>
-	  <option value="630,1136">iPhone5 not parallax (630×1136)</option>
-	  <option value="640,960">iPhone4 not parallax (640x960)</option>
-	  <option value="320,240">320x240</option>
-	  <option value="640,480">640x480</option>
-	  <option value="800,600">800x600</option>
-	  <option value="1280,768">1280x768</option>
-	  <option value="1280,800">1280x800</option>
-	  <option value="1366,768">1366x768</option>
-	  <option value="1280,960">1280x960</option>
-	  <option value="1440,900">1440x900</option>
-	  <option value="1280,1024">1280x1024</option>
-	  <option value="1600,1200">1600x1200</option>
-	  <option value="1920,1080">1920x1080</option>
-	  <option value="2880,1800">2880x1800</option>
-	</select>
-	<button id="render-exec-btn">Render</button>
-	<div id="render-link"></div>
-	<div class="scroll">
-	<canvas id="render-canv"></canvas>
-	</div>
+        <select id="render-select">
+          <option value="1024,768">1024x768</option>
+          <option value="744,1392">iPhone5 (744x1392)</option>
+          <option value="740,1196">iPhone4 (740×1196)</option>
+          <option value="1424,1424">iPad2/mini (1424×1424)</option>
+          <option value="2448,2448">iPad Retina (2448×2448)</option>
+          <option value="630,1136">iPhone5 not parallax (630×1136)</option>
+          <option value="640,960">iPhone4 not parallax (640x960)</option>
+          <option value="320,240">320x240</option>
+          <option value="640,480">640x480</option>
+          <option value="800,600">800x600</option>
+          <option value="1280,768">1280x768</option>
+          <option value="1280,800">1280x800</option>
+          <option value="1366,768">1366x768</option>
+          <option value="1280,960">1280x960</option>
+          <option value="1440,900">1440x900</option>
+          <option value="1280,1024">1280x1024</option>
+          <option value="1600,1200">1600x1200</option>
+          <option value="1920,1080">1920x1080</option>
+          <option value="2880,1800">2880x1800</option>
+        </select>
+        <button id="render-exec-btn">Render</button>
+        <div id="render-link"></div>
+        <div class="scroll">
+          <canvas id="render-canv"></canvas>
+        </div>
+      </div>
+      <div id="render-svg-div">
+        <button id="render-svg-exec-btn">Render SVG</button>
+        <div id="render-svg-link"></div>
+        <div id="render-svg-canv"></div>
       </div>
     </div>
     <div class="lfloat"  id="stage">

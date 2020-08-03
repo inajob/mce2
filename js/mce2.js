@@ -625,6 +625,33 @@ function dumpDataURL(){
 	    });
 	  },500);
 	}
+function renderSvg(){
+  var pf = playFlag;
+  playFlag = false;
+  // 十分待ってから実行
+  setTimeout(function(){
+    draw(function(out){
+      // TODO: === use svg Renderer
+      var r = new RendererSVG(fonts);
+      r.render(out, 800);
+      var svgText = '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="-1,-1,2,2">' + r.svgData.join("\n")+ "</svg>"
+      // =======
+      $('#render-svg-link').empty();
+      $('#render-svg-link').append($('<a>').attr('href','data:image/svg+xml,' + encodeURIComponent(svgText)).text('Download').attr('target','_blank'));
+      //
+      $('#render-svg-canv').empty();
+      $('#render-svg-canv').html('<img src="' +
+        'data:image/svg+xml;charset=utf-8,' + 
+        ( encodeURIComponent('<?xml version="1.0" encoding="utf-8"?>\n' + svgText)) + '"/>');
+
+      //$('#render-svg-canv').html(svgText);
+      if(pf){
+        playFlag = pf;
+        animationFrame();
+      }
+    });
+  },500);
+}
 
         function update(){
 	  t = 0;
@@ -658,23 +685,27 @@ function dumpDataURL(){
 
 
 	function changeTab(n){
-          $('#text-div').hide();
-          $('#labels-div').hide();
-          $('#render-div').hide();
-          switch(n){
-	    case 0:
-              $('#text-div').show();
-	      break;
-            case 1:
-              $('#labels-div').show();
-	      break;
-            case 2:
-              $('#render-div').show();
-	      break;
- 
-            default:
-	      throw "error change tab";
-	  }
+    $('#text-div').hide();
+    $('#labels-div').hide();
+    $('#render-div').hide();
+    $('#render-svg-div').hide();
+    switch(n){
+      case 0:
+        $('#text-div').show();
+        break;
+      case 1:
+        $('#labels-div').show();
+        break;
+      case 2:
+        $('#render-div').show();
+        break;
+      case 3:
+        $('#render-svg-div').show();
+        break;
+
+      default:
+        throw "error change tab";
+    }
 	}
 
         if(document.location.hash){
@@ -832,6 +863,10 @@ function dumpDataURL(){
 	$('#render-btn').click(function(){
 	  changeTab(2);
 	});
+	$('#render-svg-btn').click(function(){
+	  changeTab(3);
+	});
+
 
 	$('#twit-btn').click(function(){
           if(isLogin){
@@ -868,6 +903,10 @@ function dumpDataURL(){
 	  var h = parseInt($('#render-height').val());
 	  render(w,h);
 	});
+        $('#render-svg-exec-btn').click(function(){
+	  renderSvg();
+	});
+
 
         // default animation on
 	$('#playbtn').text('stop');
