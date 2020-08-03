@@ -329,6 +329,9 @@ function dumpDataURL(){
  block("ploya"){
    !polya = 0;
    autoFig(0){
+    rotate((polya*p) * 2){
+      write("moveTo 0 0.5");
+    }
     loop(n){
      !polya = polya + 1;
      rotate((polya*p)/n * 2){
