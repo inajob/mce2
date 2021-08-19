@@ -139,6 +139,9 @@ function write($user,$title,$body,$type){
     $emeta = $ehead->addChild('meta');
     $emeta->addAttribute('property','og:image');
     $emeta->addAttribute('content',BASE_URL.'data/' . urlencode(mkFileName($user,$title,'png')));
+    $emeta2 = $ehead->addChild('meta');
+    $emeta2->addAttribute('property','og:type');
+    $emeta2->addAttribute('content', 'website');
     $ehead->addChild('script','')->addAttribute('src','../js/jquery-1.6.1.min.js');
     $ehead->addChild('script','')->addAttribute('src','../js/loader.js');
     $link = $ehead->addChild('link','');
