@@ -144,7 +144,7 @@ function write($user,$title,$body,$type){
     $emeta2->addAttribute('content', 'website');
     $emeta3 = $ehead->addChild('meta');
     $emeta3->addAttribute('property','og:title');
-    $emeta3->addAttribute('content',urldecode($title))->addAttribute('id','title'));
+    $emeta3->addAttribute('content',urldecode($title));
  
     $ehead->addChild('script','')->addAttribute('src','../js/jquery-1.6.1.min.js');
     $ehead->addChild('script','')->addAttribute('src','../js/loader.js');
